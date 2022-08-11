@@ -1,0 +1,130 @@
+// ************************** Variation
+// ************************************
+
+// ****** Brand Color
+$cl-brand-primary: #5d55c4;
+$cl-brand-light: #7269dc;
+$cl-brand-black: #161614;
+$cl-brand-white: #fffef9;
+
+// ****** Light Mode
+$cl-accent-day: #e9b654;
+$cl-accent-night: #8b81c6;
+// DAY
+$cl-font__lm-day: #161614;
+$cl-details__lm-day: #f8f5eb;
+$cl-bgDashboard__lm: #eeedf6;
+// NIGHT
+$cl-font__lm-night: #f3f4fa;
+$cl-accent__lm-night: #8b81c6;
+$cl-details__lm-night: #494854;
+$cl-bgPlate__lm-night: #2c2b32;
+$cl-sub__lm-night: #2c2b32;
+
+// ****** Dark Mode
+// DAY
+$cl-font__dm-white: #d1d1d1;
+$cl-border__dm-day: #f3e7ac;
+$cl-details__dm: #2d2d33;
+// NIGHT
+$cl-accent__dm-night: #715fd8;
+
+// ****** Shape
+$border-radius: 16px;
+
+// ************************** Light Mode
+// *************************************
+.db {
+  background: $cl-bgDashboard__lm;
+}
+// ライトモード 昼
+div.--day {
+  background: $cl-brand-white;
+  border-color: $cl-brand-white;
+
+  &::after {
+    color: $cl-accent-day;
+  }
+  .clock,
+  .city {
+    color: $cl-font__lm-day;
+  }
+  .details {
+    background: $cl-details__lm-day;
+    & > div {
+      color: $cl-accent-day;
+    }
+  }
+  .bar {
+    background: $cl-accent-day;
+  }
+}
+// ライトモード 夜
+div.--night {
+  background: $cl-bgPlate__lm-night;
+  border-color: $cl-bgPlate__lm-night;
+  &::after {
+    color: $cl-accent__lm-night;
+  }
+  .clock,
+  .city {
+    color: $cl-font__lm-night;
+  }
+  .details {
+    background: $cl-details__lm-night;
+    & > div {
+      color: $cl-accent__lm-night;
+    }
+  }
+  .bar {
+    background: $cl-accent__lm-night;
+  }
+}
+
+// ************************** Dark Mode
+// ************************************
+.--dm {
+  .db {
+    background: $cl-brand-black;
+    .details {
+      background: $cl-details__dm;
+    }
+    // ライトモード 昼
+    div.--day {
+      background: $cl-brand-black;
+      border-color: $cl-border__dm-day;
+      &::after,
+      .details > div {
+        color: $cl-accent-day;
+      }
+      .clock,
+      .city {
+        color: $cl-font__dm-white;
+      }
+      .bar {
+        background: $cl-accent-day;
+      }
+    }
+    // ライトモード 夜
+    div.--night {
+      background: $cl-brand-black;
+      border-color: $cl-accent-night;
+      &::after,
+      .details > div {
+        color: $cl-accent__dm-night;
+      }
+      .clock,
+      .city {
+        color: $cl-font__dm-white;
+      }
+      .bar {
+        background: $cl-accent-night;
+      }
+    }
+  }
+}
+
+// *** FONT ***
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:ital,wght@0,600;1,600&display=swap');
+$font-num: 'Lato';
+$font-en: 'Poppins';

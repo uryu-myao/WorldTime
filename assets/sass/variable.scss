@@ -1,5 +1,10 @@
-// ************************** Variation
+// ************************** VARIATION
 // ************************************
+
+// *** Font ***
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:ital,wght@0,600;1,600&display=swap');
+$font-num: 'Lato';
+$font-en: 'Poppins';
 
 // ****** Brand Color
 $cl-brand-primary: #5d55c4;
@@ -23,7 +28,7 @@ $cl-sub__lm-night: #2c2b32;
 
 // ****** Dark Mode
 // DAY
-$cl-font__dm-white: #d1d1d1;
+$cl-font__dm-white: #dcd9e7;
 $cl-border__dm-day: #f3e7ac;
 $cl-details__dm: #2d2d33;
 // NIGHT
@@ -32,7 +37,7 @@ $cl-accent__dm-night: #715fd8;
 // ****** Shape
 $border-radius: 16px;
 
-// ************************** Light Mode
+// ************************** LIGHT MODE
 // *************************************
 .db {
   background: $cl-bgDashboard__lm;
@@ -81,7 +86,7 @@ div.--night {
   }
 }
 
-// ************************** Dark Mode
+// ************************** DARK MODE
 // ************************************
 .--dm {
   .db {
@@ -123,8 +128,3 @@ div.--night {
     }
   }
 }
-
-// *** FONT ***
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:ital,wght@0,600;1,600&display=swap');
-$font-num: 'Lato';
-$font-en: 'Poppins';

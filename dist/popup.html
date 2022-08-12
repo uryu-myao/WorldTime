@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WorldTime</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body id="db-body">
+    <div class="db">
+      <header class="db-header">
+        <div class="db-header-inner">
+          <div class="db-header-logo">TIME</div>
+          <nav class="db-header-nav">
+            <ul>
+              <li class="btn-new"></li>
+              <li class="btn-meridiem"></li>
+              <li class="btn-mode"></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="db-body">
+        <div class="db-body-inner">
+          <div class="db-item --day">
+            <div class="location"><p class="city">tokyo</p></div>
+            <div class="time"><p class="clock">23:45</p></div>
+            <div class="details">
+              <div class="details-l">
+                <p class="hlc">jst</p>
+                <span class="bar"></span>
+                <p class="hlc">utc+9</p>
+              </div>
+              <div class="details-r">
+                <p class="week">mon</p>
+                <span class="bar"></span>
+                <p class="month">30 jul</p>
+              </div>
+            </div>
+          </div>
+          <div class="db-item --night">
+            <div class="location"><p class="city">tokyo</p></div>
+            <div class="time"><p class="clock">23:45</p></div>
+            <div class="details">
+              <div class="details-l">
+                <p class="hlc">jst</p>
+                <span class="bar"></span>
+                <p class="hlc">utc+9</p>
+              </div>
+              <div class="details-r">
+                <p class="week">mon</p>
+                <span class="bar"></span>
+                <p class="month">30 jul</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/contentScript.js"></script>
+  </body>
+</html>

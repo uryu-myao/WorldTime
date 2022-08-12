@@ -1,0 +1,21 @@
+.btn-new::before {
+  width: 12px;
+  height: 12px;
+  background: center / cover no-repeat url('/images/icon_plus.svg');
+}
+.btn-meridiem::before {
+  width: 18px;
+  height: 24px;
+  background: center / contain no-repeat url('/images/icon_24.svg');
+}
+
+.btn-mode::before {
+  width: 14px;
+  height: 14px;
+  background: center / cover no-repeat url('/images/icon_dark.svg');
+}
+.--dm .btn-mode::before {
+  width: 18px;
+  height: 18px;
+  background: center / cover no-repeat url('/images/icon_light.svg');
+}

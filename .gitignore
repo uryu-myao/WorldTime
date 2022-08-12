@@ -31,7 +31,7 @@ npm-debug.log
 .sass-cache
 *.css.map
 build/
-dist/
+# dist/
 *.bundle.js
 
 # Firebase cache #

@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "WorldTime",
+  "description": "",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/contentScript.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "images/icon_12.svg",
+        "images/icon_24.svg",
+        "images/icon_dark.svg",
+        "images/icon_light.svg",
+        "images/icon_plus.svg",
+        "images/icon_setting.svg"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "images/icon_16.png",
+      "48": "images/icon_48.png",
+      "128": "images/icon_128.png"
+    },
+    "default_title": "WorldTime",
+    "default_popup": "popup.html"
+  }
+}

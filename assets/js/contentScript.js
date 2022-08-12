@@ -3,12 +3,16 @@
 // WorldTimeAPI
 // http://worldtimeapi.org/
 
-// const mainData = fetch(
-//   'http://worldtimeapi.org/api/timezone/Asia/Tokyo'
-// ).then((res) => res.json());
+const timeApi_url = 'https://worldtimeapi.org/api/timezone/';
+
+const mainData = fetch(
+  'http://worldtimeapi.org/api/timezone/Asia/Tokyo'
+).then((res) => res.json());
 
 // console.log(mainData);
 // console.log(mainData.abbreviation);
+
+// document.querySelector('.header').classList.contains('no-sticky');
 
 // Dark Mode 切り替え
 const toggleLightDarkMode = (function () {

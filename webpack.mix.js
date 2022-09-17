@@ -1,11 +1,11 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
 
 mix
   .setPublicPath('./')
-  .sass('assets/sass/style.scss', 'dist/css')
-  .js('assets/js/contentScript.js', 'dist/js')
+  .sass('src/sass/style.scss', 'dist/css')
+  .js('src/js/contentScript.js', 'dist/js')
   .vue()
-  .copy('assets/images/', 'dist/images')
+  .copy('src/images/', 'dist/images')
   .options({
     processCssUrls: false,
   });

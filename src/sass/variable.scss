@@ -42,7 +42,19 @@ $border-radius: 16px;
 .db {
   background: $cl-bgDashboard__lm;
 }
-// ライトモード 昼
+.search {
+  &-field {
+    background: $cl-bgDashboard__lm;
+    &:focus {
+      background: white;
+    }
+    &::placeholder {
+      color: $cl-brand-primary;
+      opacity: 0.2;
+    }
+  }
+}
+// ライトモードで 昼 のタイムボードのカラー
 div.--day {
   background: $cl-brand-white;
   border-color: $cl-brand-white;
@@ -64,7 +76,7 @@ div.--day {
     background: $cl-accent-day;
   }
 }
-// ライトモード 夜
+// ライトモードで 夜 のタイムボードのカラー
 div.--night {
   background: $cl-bgPlate__lm-night;
   border-color: $cl-bgPlate__lm-night;
@@ -94,7 +106,7 @@ div.--night {
     .details {
       background: $cl-details__dm;
     }
-    // ライトモード 昼
+    // ダークモードで 昼 のタイムボードのカラー
     div.--day {
       background: $cl-brand-black;
       border-color: $cl-border__dm-day;
@@ -110,7 +122,7 @@ div.--night {
         background: $cl-accent-day;
       }
     }
-    // ライトモード 夜
+    // ダークモードで 夜 のタイムボードのカラー
     div.--night {
       background: $cl-brand-black;
       border-color: $cl-accent-night;
@@ -124,6 +136,18 @@ div.--night {
       }
       .bar {
         background: $cl-accent-night;
+      }
+    }
+  }
+  .search {
+    &-field {
+      background: #312e53;
+      color: $cl-font__dm-white;
+      &:focus {
+        background: $cl-brand-black;
+      }
+      &::placeholder {
+        color: $cl-font__dm-white;
       }
     }
   }

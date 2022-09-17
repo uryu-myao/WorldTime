@@ -12,6 +12,21 @@
   background: #eeedf6;
 }
 
+.search-field {
+  background: #eeedf6;
+}
+.search-field:focus {
+  background: white;
+}
+.search-field::-moz-placeholder {
+  color: #5d55c4;
+  opacity: 0.2;
+}
+.search-field::placeholder {
+  color: #5d55c4;
+  opacity: 0.2;
+}
+
 div.--day {
   background: #fffef9;
   border-color: #fffef9;
@@ -90,6 +105,19 @@ div.--night .bar {
 .--dm .db div.--night .bar {
   background: #8b81c6;
 }
+.--dm .search-field {
+  background: #312e53;
+  color: #dcd9e7;
+}
+.--dm .search-field:focus {
+  background: #161614;
+}
+.--dm .search-field::-moz-placeholder {
+  color: #dcd9e7;
+}
+.--dm .search-field::placeholder {
+  color: #dcd9e7;
+}
 
 .db {
   width: 420px;
@@ -99,11 +127,11 @@ div.--night .bar {
 .db-header {
   width: 100%;
   background: #5d55c4;
-  margin: 0 0 10px;
 }
 .db-header-inner {
   width: 100%;
   padding: 16px 20px 19px;
+  margin: 0 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -120,6 +148,9 @@ div.--night .bar {
   margin-right: 10px;
   cursor: pointer;
   z-index: 1;
+}
+.db-header-nav li:hover {
+  background: #fffef9;
 }
 .db-header-nav li:last-child {
   margin-right: 0;
@@ -240,6 +271,7 @@ div.--night .bar {
   text-align: right;
 }
 
+.abbr,
 .hlc {
   text-transform: uppercase;
 }
@@ -283,4 +315,68 @@ div.--night .bar {
   width: 18px;
   height: 18px;
   background: center/cover no-repeat url("/images/icon_light.svg");
+}
+
+.search {
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.search-inner {
+  padding: 12px 20px 0;
+  margin: 0 auto 22px;
+  position: relative;
+}
+.search-inner::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% + 6px);
+  left: 32px;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background: center/cover no-repeat url("/images/icon_search.svg");
+  z-index: 2;
+}
+.search-field {
+  width: 100%;
+  padding: 2px 16px 2px 40px;
+  font-size: 22px;
+  font-family: "Poppins", sans-serif;
+  border: 4px solid #7269dc;
+  border-radius: 25px;
+  height: 50px;
+}
+.search-field:focus {
+  outline: 0;
+}
+.search-field:focus::-moz-placeholder {
+  opacity: 0;
+}
+.search-field:focus::placeholder {
+  opacity: 0;
+}
+
+.--search .search {
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+}
+
+.errorMessage {
+  text-align: center;
+  width: calc(100% - 40px);
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: red;
+  font-weight: 600;
+  letter-spacing: 0.04rem;
+  font-family: "Poppins";
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
 }

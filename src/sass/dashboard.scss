@@ -6,11 +6,11 @@
   &-header {
     width: 100%;
     background: $cl-brand-primary;
-    margin: 0 0 10px;
 
     &-inner {
       width: 100%;
       padding: 16px 20px 19px;
+      margin: 0 0 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -33,6 +33,10 @@
         margin-right: 10px;
         cursor: pointer;
         z-index: 1;
+
+        &:hover {
+          background: $cl-brand-white;
+        }
 
         &:last-child {
           margin-right: 0;
@@ -178,6 +182,7 @@
   }
 }
 
+.abbr,
 .hlc {
   text-transform: uppercase;
 }

@@ -19,32 +19,30 @@
           </nav>
         </div>
       </header>
+      <div class="search">
+        <div class="search-inner">
+          <div id="errorMessage" class="errorMessage"></div>
+          <label for="search"></label>
+          <input
+            type="search"
+            id="search-field"
+            class="search-field"
+            placeholder="Search by city name"
+          />
+          <div class="search-results"></div>
+        </div>
+      </div>
+
       <main class="db-body">
         <div class="db-body-inner">
-          <div class="db-item --day">
+          <div id="current_ip" class="db-item --day">
             <div class="location"><p class="city">tokyo</p></div>
             <div class="time"><p class="clock">23:45</p></div>
             <div class="details">
               <div class="details-l">
-                <p class="hlc">jst</p>
+                <p class="abbr"></p>
                 <span class="bar"></span>
-                <p class="hlc">utc+9</p>
-              </div>
-              <div class="details-r">
-                <p class="week">mon</p>
-                <span class="bar"></span>
-                <p class="month">30 jul</p>
-              </div>
-            </div>
-          </div>
-          <div class="db-item --night">
-            <div class="location"><p class="city">tokyo</p></div>
-            <div class="time"><p class="clock">23:45</p></div>
-            <div class="details">
-              <div class="details-l">
-                <p class="hlc">jst</p>
-                <span class="bar"></span>
-                <p class="hlc">utc+9</p>
+                <p class="hlc">utc<span></span></p>
               </div>
               <div class="details-r">
                 <p class="week">mon</p>

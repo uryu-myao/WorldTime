@@ -3,6 +3,8 @@
   "name": "WorldTime",
   "description": "",
   "version": "1.0",
+  "permissions": [],
+  "background": { "script": ["js/background.js"] },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
@@ -23,12 +25,12 @@
     }
   ],
   "action": {
+    "default_title": "WorldTime",
+    "default_popup": "popup.html",
     "default_icon": {
       "16": "images/icon_16.png",
       "48": "images/icon_48.png",
       "128": "images/icon_128.png"
-    },
-    "default_title": "WorldTime",
-    "default_popup": "popup.html"
+    }
   }
 }

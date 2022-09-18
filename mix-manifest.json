@@ -2,14 +2,13 @@
     "/dist/js/contentScript.js": "/dist/js/contentScript.js",
     "/dist/css/style.css": "/dist/css/style.css",
     "/dist/images/icon_12.svg": "/dist/images/icon_12.svg",
-    "/dist/images/icon_128.png": "/dist/images/icon_128.png",
-    "/dist/images/icon_16.png": "/dist/images/icon_16.png",
-    "/dist/images/icon_24.png": "/dist/images/icon_24.png",
     "/dist/images/icon_24.svg": "/dist/images/icon_24.svg",
-    "/dist/images/icon_48.png": "/dist/images/icon_48.png",
     "/dist/images/icon_dark.svg": "/dist/images/icon_dark.svg",
     "/dist/images/icon_light.svg": "/dist/images/icon_light.svg",
     "/dist/images/icon_plus.svg": "/dist/images/icon_plus.svg",
     "/dist/images/icon_search.svg": "/dist/images/icon_search.svg",
-    "/dist/images/icon_setting.svg": "/dist/images/icon_setting.svg"
+    "/dist/images/icon_setting.svg": "/dist/images/icon_setting.svg",
+    "/dist/shared/icon_128.png": "/dist/shared/icon_128.png",
+    "/dist/shared/icon_16.png": "/dist/shared/icon_16.png",
+    "/dist/shared/icon_48.png": "/dist/shared/icon_48.png"
 }

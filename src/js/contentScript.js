@@ -1,97 +1,97 @@
-'use strict';
+'use strict'
 
 const db_body = document.querySelector('#db-body'),
   triggler_darkMode = document.querySelector('.btn-mode'),
-  triggler_search = document.querySelector('.btn-new');
+  triggler_search = document.querySelector('.btn-new')
 
 // Dark Mode 切り替え
 const toggleDarkMode = (function () {
-  let active = false;
+  let active = false
   let toggleMode = function () {
     if (!active) {
-      db_body.classList.add('--dm');
-      active = true;
+      db_body.classList.add('--dm')
+      active = true
     } else {
-      db_body.classList.remove('--dm');
-      active = false;
+      db_body.classList.remove('--dm')
+      active = false
     }
-  };
+  }
   let bindActions = function () {
-    triggler_darkMode.addEventListener('click', toggleMode, false);
-  };
+    triggler_darkMode.addEventListener('click', toggleMode, false)
+  }
   let init = function () {
-    bindActions();
-  };
-  return { init: init };
-})();
-toggleDarkMode.init();
+    bindActions()
+  }
+  return { init: init }
+})()
+toggleDarkMode.init()
 
 const toggleSearch = (function () {
-  let active = false;
+  let active = false
   let toggleMode = function () {
     if (!active) {
-      db_body.classList.add('--search');
-      active = true;
+      db_body.classList.add('--search')
+      active = true
     } else {
-      db_body.classList.remove('--search');
-      active = false;
+      db_body.classList.remove('--search')
+      active = false
     }
-  };
+  }
   let bindActions = function () {
-    triggler_search.addEventListener('click', toggleMode, false);
-  };
+    triggler_search.addEventListener('click', toggleMode, false)
+  }
   let init = function () {
-    bindActions();
-  };
-  return { init: init };
-})();
-toggleSearch.init();
+    bindActions()
+  }
+  return { init: init }
+})()
+toggleSearch.init()
 
 // WorldTimeAPI
 // http://worldtimeapi.org/
 // https://app.abstractapi.com/dashboard/
 // const errorMessage = document.querySelector('#errorMessage');
 const renderError = function (msg) {
-  errorMessage.innerHTML = '';
-  errorMessage.insertAdjacentText('afterbegin', msg);
-  errorMessage.style.opacity = 1;
-};
+  errorMessage.innerHTML = ''
+  errorMessage.insertAdjacentText('afterbegin', msg)
+  errorMessage.style.opacity = 1
+}
 
-const getJSON = function (url) {};
+const getJSON = function (url) {}
 
 const searchShow = async (query) => {
-  const url = `https://timezone.abstractapi.com/v1/current_time/?api_key=be0e8b0c64a84b6a88eb4277081eec70&location=${query}`;
+  const url = `https://timezone.abstractapi.com/v1/current_time/?api_key=be0e8b0c64a84b6a88eb4277081eec70&location=${query}`
   fetch(url)
     .then((response) => {
       if (response.type === 'cors') {
-        throw new Error(`Please try some nearby cities`);
+        throw new Error(`Please try some nearby cities`)
       }
-      response.json();
+      response.json()
     })
     .then((jsonData) => {
       // 何かを実行する
-      console.log(jsonData);
+      console.log(jsonData)
 
-      errorMessage.innerHTML = '';
+      errorMessage.innerHTML = ''
     })
     .catch((err) => {
       // console.log(err);
-      renderError(`Oops, ${err.message}...`);
-    });
-};
+      renderError(`Oops, ${err.message}...`)
+    })
+}
 
 // Search logic
-let searchTimeoutToken = 0;
-const searchFieldElement = document.querySelector('#search-field');
+let searchTimeoutToken = 0
+const searchFieldElement = document.querySelector('#search-field')
 searchFieldElement.onkeyup = (event) => {
-  clearTimeout(searchTimeoutToken);
+  clearTimeout(searchTimeoutToken)
   if (searchFieldElement.value.trim().length === 0) {
-    return;
+    return
   }
   searchTimeoutToken = setTimeout(() => {
-    searchShow(searchFieldElement.value);
-  }, 200);
-};
+    searchShow(searchFieldElement.value)
+  }, 200)
+}
 
 // DATA
 const timezone1 = {
@@ -102,14 +102,14 @@ const timezone1 = {
   week: 'mon',
   date: '22',
   month: 'fri',
-};
-const timezones = [timezone1];
+}
+const timezones = [timezone1]
 
 // Display elements
-const timezonesContainer = document.querySelector('.db-body-inner');
+const timezonesContainer = document.querySelector('.db-body-inner')
 
 const displayTimezones = function (tzs) {
-  timezonesContainer.innerHTML = '';
+  timezonesContainer.innerHTML = ''
 
   tzs.forEach(function (tz, i) {
     const html = /*html*/ `
@@ -129,8 +129,8 @@ const displayTimezones = function (tzs) {
           </div>
         </div>
       </div>
-    `;
-    timezonesContainer.insertAdjacentHTML('afterbegin', html);
-  });
-};
-displayTimezones(timezones);
+    `
+    timezonesContainer.insertAdjacentHTML('afterbegin', html)
+  })
+}
+displayTimezones(timezones)
